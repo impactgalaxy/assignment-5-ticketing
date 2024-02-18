@@ -1,0 +1,53 @@
+.raleway-font {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.ball-1 {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    left: calc((100% - 10px));
+    top: -10px;
+}
+
+.ball-2 {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    left: calc((100% - 10px));
+    bottom: -10px;
+}
+
+.ball-3 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    left: calc((100% - 20px));
+    top: -20px;
+}
+
+.ball-4 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    left: calc((100% - 20px));
+    bottom: -20px;
+}
+
+table {
+    width: 100%;
+    padding: 15px;
+    border-bottom: 2px solid;
+}
+
+td {
+    text-align: center;
+}
