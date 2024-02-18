@@ -330,7 +330,7 @@
                                 <thead class="border-b-4 border-dashed">
                                     <tr>
                                         <th>Seat<span class="font-sans text-green-600 px-2" id="count"></span></th>
-                                        <th>Seat</th>
+                                        <th>Class</th>
                                         <th>Price</th>
                                     </tr>
                                 </thead>
@@ -367,9 +367,10 @@
 
                                     <label for="user-number" class="font-bold block">Passenger Number<span
                                             class="text-3xl text-red-600">*</span>
-                                        <input type="number" name="user-name" id="user-number" class="input w-full">
+                                        <input type="number" name="user-name" id="user-number" class="input w-full"
+                                            onkeyup="userNumber(event)">
                                     </label>
-                                    <button class="btn btn-primary w-full" id="form">Submit</button>
+                                    <button class="btn btn-primary w-full" id="form" disabled>Submit</button>
                                     <a href="#" class="float-left hover:border-b">Terms and Condition</a>
                                     <a href="#" class="float-right hover:border-b">Refund Policy</a>
                                 </form>
@@ -391,7 +392,7 @@
         <nav>
             <h6 class="footer-title">Download our app</h6>
             <div class="flex border-2 px-4">
-                <img src="../images/playstore.png" alt="">
+                <img src="./images/playstore.png" alt="">
                 <div class="text-xs text-white">
                     <h1>GET IT ON</h1>
                     <p>Google Play</p>

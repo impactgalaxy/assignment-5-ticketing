@@ -100,7 +100,12 @@ function couponApply() {
 }
 const form = document.getElementById("form");
 const message = document.getElementById("message");
+function userNumber(event) {
+    if (event.target.value.length > 4) {
+        form.removeAttribute("disabled");
+    }
 
+}
 form.addEventListener("click", (e) => {
     e.preventDefault();
     const userNumber = document.getElementById("user-number");
@@ -116,6 +121,7 @@ form.addEventListener("click", (e) => {
         hideElement("footer");
         hideElement("header");
     }
+    userNumber.value = "";
 })
 function display() {
     hideElement("message");
