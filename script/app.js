@@ -88,6 +88,7 @@ function couponApply() {
         const discounted = newTotal * 20 / 100;
         discountShow.innerText = `Congratulations! You have got ${discounted} taka discount`;
         addValueById("grand-total", newTotal - discounted);
+
     }
     else {
         couponDiv.style.display = "none";
@@ -96,6 +97,7 @@ function couponApply() {
 
     couponCode.value = "";
     couponBtn.setAttribute("disabled", true);
+    couponCode.setAttribute("disabled", true);
 
 }
 const form = document.getElementById("form");
