@@ -16,6 +16,7 @@ function myApp() {
 
             if (seat.classList.contains("bg-green-600")) {
 
+
                 if (arr.length > 3) {
                     alert("You can't by over 4 seats");
                     totalSeats = totalSeats;
@@ -44,6 +45,7 @@ function myApp() {
                     addValueById("show", totalSeats);
                     count += 1
                     addValueById("count", count);
+                    seat.setAttribute("title", "Sold");
                 }
 
             } else {
@@ -56,6 +58,7 @@ function myApp() {
                 addValueById("grand-total", totalPrice);
                 count -= 1
                 addValueById("count", count);
+                seat.removeAttribute("title");
             }
         });
     }
