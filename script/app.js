@@ -10,9 +10,10 @@ function myApp() {
 
     for (const seat of seats) {
 
-        seat.addEventListener("click", () => {
+        seat.addEventListener("click", (event) => {
             const getInnerText = seat.innerText;
             setBackgroundColorById(getInnerText);
+
 
             if (seat.classList.contains("bg-green-600")) {
 
@@ -46,6 +47,7 @@ function myApp() {
                     count += 1
                     addValueById("count", count);
                     seat.setAttribute("title", "Sold");
+
                 }
 
             } else {
@@ -53,12 +55,22 @@ function myApp() {
                 arr.pop();
                 addValueById("avail-seats", totalSeats);
                 addValueById("show", totalSeats);
-                tbody.removeChild(tbody.lastElementChild);
                 addValueById("total-price", totalPrice -= 550);
                 addValueById("grand-total", totalPrice);
                 count -= 1
                 addValueById("count", count);
                 seat.removeAttribute("title");
+
+                for (const tElement of tbody.children) {
+                    let select = tElement.children[0].innerText;
+                    let buttonText = event.target.innerText;
+                    if (select === buttonText) {
+                        tElement.style.display = "none";
+                    }
+                }
+
+
+
             }
         });
     }
